@@ -1,0 +1,28 @@
+
+An example of Square In-App Payments SDK (frontend only) integration into a bare `expo` 51 `React Native` project.
+
+Source code taken (adapted) from: https://github.com/square/in-app-payments-react-native-plugin/tree/master/react-native-in-app-payments-quickstart
+
+Configuration: custom.
+
+## Build & Run
+
+Set up `.env.local` file with:
+
+```
+EXPO_PUBLIC_SQUARE_APP_ID=
+EXPO_PUBLIC_SQUARE_LOCATION_ID=
+EXPO_PUBLIC_APPLE_PAY_MERCHANT_ID=
+```
+
+### iOS
+
+```bash
+$ yarn && yarn ios --device
+```
+
+### Android
+
+```bash
+$ yarn && yarn android --device
+```
