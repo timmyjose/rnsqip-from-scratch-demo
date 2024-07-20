@@ -1,41 +1,45 @@
-
-
 iOS:
 
     - Update Podfile with dependency.
     - pod install
+    - Sign with development team
 
 
 Android:
 
-    - Update android/build.gradle with dependency version and dependency urls:
-
-    // Top-level build file where you can add configuration options common to all sub-projects/modules.
+    - android/build.gradle:
 
 buildscript {
     ext {
-        sqipVersion="1.6.6"
+        sqipVersion = "1.6.6"
     }
     repositories {
         maven {
           url 'https://sdk.squareup.com/public/android'
-        }
-    }
-    dependencies {
-        classpath('com.android.tools.build:gradle')
-        classpath('com.facebook.react:react-native-gradle-plugin')
-        classpath('org.jetbrains.kotlin:kotlin-gradle-plugin')
-    }
-}
-
-apply plugin: "com.facebook.react.rootproject"
-
-allprojects {
-    repositories {
-        maven {
-         url 'https://sdk.squareup.com/public/android'
        }
     }
 }
 
-    - Update AndroidManifest.xml (remove "package")
+allprojects {
+    repositories {
+        maven {
+          url 'https://sdk.squareup.com/public/android'
+       }
+    }
+}
+
+    - android/app/build.gradle:
+
+ dependencies {
+    implementation project(':react-native-square-in-app-payments')
+    implementation 'com.facebook.react:react-native:+'
+    implementation 'com.google.android.gms:play-services-wallet:16.0.1'
+}
+
+
+    - settings.gradle (end):
+
+include ':react-native-square-in-app-payments'
+project(':react-native-square-in-app-payments').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-square-in-app-payments/android')
+
+
