@@ -166,10 +166,6 @@ dependencies {
     } else {
         implementation jscFlavor
     }
-
-    implementation project(':react-native-square-in-app-payments')
-    implementation 'com.facebook.react:react-native:+'
-    implementation 'com.google.android.gms:play-services-wallet:16.0.1'
 }
 
 apply from: new File(["node", "--print", "require.resolve('@react-native-community/cli-platform-android/package.json', { paths: [require.resolve('react-native/package.json')] })"].execute(null, rootDir).text.trim(), "../native_modules.gradle");

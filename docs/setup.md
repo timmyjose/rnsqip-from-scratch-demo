@@ -1,11 +1,27 @@
 iOS:
+====
 
-    - Update Podfile with dependency.
+    - Update Podfile with dependency:
+
+         pod 'RNSquareInAppPayments', :path => '../node_modules/react-native-square-in-app-payments'
+
+    - Create new Build Phase Run Script:
+
+ FRAMEWORKS="${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}"
+"${FRAMEWORKS}/SquareInAppPaymentsSDK.framework/setup"
+
     - pod install
+
     - Sign with development team
 
 
+
 Android:
+=========
+
+    - app.json `expo` build properties, set minSdkVersion to 24:
+
+                "minSdkVersion": 24
 
     - android/build.gradle:
 
@@ -27,19 +43,3 @@ allprojects {
        }
     }
 }
-
-    - android/app/build.gradle:
-
- dependencies {
-    implementation project(':react-native-square-in-app-payments')
-    implementation 'com.facebook.react:react-native:+'
-    implementation 'com.google.android.gms:play-services-wallet:16.0.1'
-}
-
-
-    - settings.gradle (end):
-
-include ':react-native-square-in-app-payments'
-project(':react-native-square-in-app-payments').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-square-in-app-payments/android')
-
-
