@@ -21,7 +21,7 @@ Android:
 
     - app.json `expo` build properties, set minSdkVersion to 24:
 
-                "minSdkVersion": 24
+                "minSdkVersion": 24 [static change once in `app.json`]
 
     - android/build.gradle:
 
@@ -43,3 +43,14 @@ allprojects {
        }
     }
 }
+
+
+
+`expo` Config plugin:
+=====================
+
+Goal: Enable the use of the `Square` In-App Payments SDK in an `expo` CNG project.
+
+
+
+
