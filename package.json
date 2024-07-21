@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "main": "expo/AppEntry.js",
   "scripts": {
-    "start": "expo start",
+    "setup": "bash scripts/setup.sh",
     "android": "expo run:android",
-    "ios": "expo run:ios"
+    "android:prod": "expo run:android --variant release",
+    "ios": "npx pod-install && expo run:ios",
+    "ios:prod": "npx pod-install && expo run:ios --configuration Release"
   },
   "dependencies": {
     "@react-navigation/native": "^6.1.18",

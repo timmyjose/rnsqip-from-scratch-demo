@@ -37,7 +37,8 @@
             "deploymentTarget": "13.4"
           }
         }
-      ]
+      ],
+      "./plugins/withSquareInAppPaymentsSDK.js"
     ]
   }
 }
