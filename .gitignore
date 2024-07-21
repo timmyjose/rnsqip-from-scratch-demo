@@ -5,6 +5,7 @@ node_modules/
 .env.local
 android
 ios
+auth_token
 
 # Expo
 .expo/

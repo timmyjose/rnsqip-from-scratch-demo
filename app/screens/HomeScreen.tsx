@@ -122,7 +122,7 @@ export default function HomeScreen() {
         await SQIPApplePay.initializeApplePay(APPLE_PAY_MERCHANT_ID)
         digitalWalletEnabled = await SQIPApplePay.canUseApplePay()
       } catch (ex) {
-        console.log(ex)
+        console.error(ex)
       }
     } else if (Platform.OS === 'android') {
       await SQIPGooglePay.initializeGooglePay(
@@ -132,7 +132,7 @@ export default function HomeScreen() {
       try {
         digitalWalletEnabled = await SQIPGooglePay.canUseGooglePay()
       } catch (ex) {
-        console.log(ex)
+        console.error(ex)
       }
     }
     setcanUseDigitalWallet(digitalWalletEnabled)
@@ -156,6 +156,7 @@ export default function HomeScreen() {
   }
 
   const onApplePayRequestNonceFailure = async (errorInfo: ErrorInfo) => {
+    console.error('request failed: ', errorInfo)
     errorMsg = errorInfo.message
     await SQIPApplePay.completeApplePayAuthorization(false, errorInfo.message)
     setAlertValue('Error processing Apple Pay payment', errorMsg, false)
@@ -213,6 +214,7 @@ export default function HomeScreen() {
   }
 
   const onCardNonceRequestSuccess = async (cardDetails: CardDetails) => {
+    console.log('onCardNonceRequestSuccess. cardDetails = ', cardDetails)
     if (chargeServerHostIsSet()) {
       try {
         await chargeCardNonce(cardDetails.nonce)
@@ -224,6 +226,7 @@ export default function HomeScreen() {
             true)
         })
       } catch (error: any) {
+        console.error(error)
         SQIPCardEntry.showCardNonceProcessingError(error.message)
       }
     } else {
@@ -483,6 +486,7 @@ export default function HomeScreen() {
         saveButtonTitle: 'Pay 🍪',
       })
     }
+    console.log('About to: startCardEntryFlow')
     await SQIPCardEntry.startCardEntryFlow(
       cardEntryConfig,
       onCardNonceRequestSuccess,
@@ -558,6 +562,7 @@ export default function HomeScreen() {
           false
         )
       } else {
+        console.log('In startDIgitalWallet, about to call requestApplePayNonce')
         await SQIPApplePay.requestApplePayNonce(
           {
             price: '1.00',

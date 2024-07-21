@@ -55,3 +55,7 @@ Android: done (`plugins/withSquareInAppPaymentsSDK.js`)
 
 iOS:  done (manual signing needed, but that should be handled by the actual app automatically(?)) (`plugins/withSquareInAppPaymentsSDK.js`)
 
+
+Full In-App Payments SDK flow:
+===============================
+
