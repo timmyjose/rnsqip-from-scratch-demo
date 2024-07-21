@@ -51,6 +51,7 @@ allprojects {
 
 Goal: Enable the use of the `Square` In-App Payments SDK in an `expo` CNG project.
 
+Android: done (`plugins/withSquareInAppPaymentsSDK.js`)
 
-
+iOS:  done (manual signing needed, but that should be handled by the actual app automatically(?)) (`plugins/withSquareInAppPaymentsSDK.js`)
 
