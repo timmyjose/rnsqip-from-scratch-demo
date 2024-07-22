@@ -19,7 +19,7 @@ const SQUARE_LOCATION_ID = process.env.EXPO_PUBLIC_SQUARE_LOCATION_ID
 // Make sure to remove trailing `/` since the CHARGE_SERVER_URL puts it
 const CHARGE_SERVER_HOST = ''
 const CHARGE_SERVER_URL = `${CHARGE_SERVER_HOST}/chargeForCookie`
-const GOOGLE_PAY_LOCATION_ID = 'REPLACE_ME'
+const GOOGLE_PAY_LOCATION_ID = 'LR1E3K56QTBCR'
 const APPLE_PAY_MERCHANT_ID = process.env.EXPO_PUBLIC_APPLE_PAY_MERCHANT_ID
 // constants require for card on file transactions
 const CREATE_CUSTOMER_CARD_SERVER_URL = `${CHARGE_SERVER_HOST}/createCustomerCard`

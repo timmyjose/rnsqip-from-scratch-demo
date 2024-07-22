@@ -1,1 +1,0 @@
-# Process for integration with Google Pay

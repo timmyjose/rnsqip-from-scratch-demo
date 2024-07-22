@@ -38,7 +38,19 @@
           }
         }
       ],
-      "./plugins/withSquareInAppPaymentsSDK.js"
+      [
+        "./plugins/withConfgureApplePayAndGooglePay.js",
+        {
+          "merchantIdentifier": "merchant.com.polybaselabs.payy-test",
+          "enableGooglePay": true
+        }
+      ],
+      [
+        "./plugins/withSquareInAppPaymentsSDK.js",
+        {
+          "sqipVersion": "1.6.6"
+        }
+      ]
     ]
   }
 }

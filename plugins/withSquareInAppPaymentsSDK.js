@@ -45,19 +45,18 @@ const addBuildPhaseRunScriptToXcode = (config) => {
 }
 
 // Android
-const SQIP_ANDROID_VERSION = '1.6.6'
 const SQIP_ANDROID_MAVEN_URL_STR = 'maven { url \'https://sdk.squareup.com/public/android\' }'
 
-const addSquareSDKToProjectBuildGradle = (config) => {
+const addSquareSDKToProjectBuildGradle = (config, sqipVersion) => {
   return withProjectBuildGradle(config, (config) => {
     let buildGradle = config.modResults.contents
 
     // Update android/build.gradle: add Square In-App Payments SDK Android Version to buildscript.ext
-    console.log(`[withSquareInAppPaymentsSDK] Updating android/build.gradle: adding SQIP Android Version ${SQIP_ANDROID_VERSION}`)
-    if (!buildGradle.includes(`sqipVersion = "${SQIP_ANDROID_VERSION}"`)) {
+    console.log(`[withSquareInAppPaymentsSDK] Updating android/build.gradle: adding SQIP Android Version ${sqipVersion}`)
+    if (!buildGradle.includes(`sqipVersion = "${sqipVersion}"`)) {
       buildGradle = buildGradle.replace(
         /ext\s*{([^}]*)}/,
-        (_, curr) => `ext {${curr}\t\tsqipVersion = "${SQIP_ANDROID_VERSION}"\n\t\t}\n`
+        (_, curr) => `ext {${curr}\t\tsqipVersion = "${sqipVersion}"\n\t\t}\n`
       )
     }
 
@@ -76,10 +75,10 @@ const addSquareSDKToProjectBuildGradle = (config) => {
   })
 }
 
-const withSquareInAppPaymentsSDK = (config) => {
+const withSquareInAppPaymentsSDK = (config, { sqipVersion }) => {
   config = addSquareSDKToPodfile(config)
   config = addBuildPhaseRunScriptToXcode(config)
-  config = addSquareSDKToProjectBuildGradle(config)
+  config = addSquareSDKToProjectBuildGradle(config, sqipVersion)
 
   return config
 }
