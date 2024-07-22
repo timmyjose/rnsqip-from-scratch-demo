@@ -1,43 +1,20 @@
-/*
- Copyright 2022 Square Inc.
+import React from 'react'
+import { View, StyleSheet, Text } from 'react-native'
 
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
-
- http://www.apache.org/licenses/LICENSE-2.0
-
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
-*/
-import React from 'react';
-import { View, StyleSheet, Text } from 'react-native';
-import PropTypes from 'prop-types';
-
-import OrderTitleView from './OrderTitleView';
-import OrderInformationTitleView from './OrderInformationTitleView';
-import OrderInformationDescriptionView from './OrderInformationDescriptionView';
-import AddressView from './AddressView';
-import GreenButton from './GreenButton';
-import DigitalWalletButton from './DigitalWalletButton';
+import OrderTitleView from './OrderTitleView'
+import OrderInformationTitleView from './OrderInformationTitleView'
+import OrderInformationDescriptionView from './OrderInformationDescriptionView'
+import AddressView from './AddressView'
+import DigitalWalletButton from './DigitalWalletButton'
 
 interface OrderModal {
-  onCloseOrderScreen: () => void;
-  onPayWithGiftCard: () => void;
-  onPayWithCard: () => void;
-  onShowDigitalWallet: () => void;
-  onBuyerVerification: () => void;
+  onCloseOrderScreen: () => void
+  onShowDigitalWallet: () => void
 }
 
 const OrderModal: React.FC<OrderModal> = ({
   onCloseOrderScreen,
-  onPayWithGiftCard,
-  onPayWithCard,
   onShowDigitalWallet,
-  onBuyerVerification,
 }) => {
   return (
     <View>
@@ -70,25 +47,13 @@ const OrderModal: React.FC<OrderModal> = ({
         </Text>
       </View>
       <View style={styles.buttonRow}>
-        <GreenButton
-          onPress={() => onPayWithGiftCard()}
-          text="Pay with gift card"
-        />
-        <GreenButton onPress={() => onPayWithCard()}
-          text="Pay with card" />
-      </View>
-      <View style={styles.buttonRow}>
         <DigitalWalletButton onPress={() => onShowDigitalWallet()} />
-        <GreenButton
-          onPress={() => onBuyerVerification()}
-          text="Buyer Verification"
-        />
       </View>
     </View>
-  );
-};
+  )
+}
 
-export default OrderModal;
+export default OrderModal
 
 const styles = StyleSheet.create({
   bodyContent: {
@@ -119,5 +84,5 @@ const styles = StyleSheet.create({
   },
   titleColumn: {
     marginRight: '8%'
-  },
-});
+  }
+})

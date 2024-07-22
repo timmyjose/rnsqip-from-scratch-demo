@@ -56,32 +56,6 @@ Android: done (`plugins/withSquareInAppPaymentsSDK.js`)
 iOS:  done (manual signing needed, but that should be handled by the actual app automatically(?)) (`plugins/withSquareInAppPaymentsSDK.js`)
 
 
-Full In-App Payments SDK flow:
-===============================
-
-1. Understand and document the process for Apple Pay and Google Pay registration: []
-    https://developer.squareup.com/docs/in-app-payments-sdk/add-digital-wallets/apple-pay
-    https://developer.squareup.com/docs/in-app-payments-sdk/add-digital-wallets/google-pay
-
-    This ties in with task 4.
-
-1b. Get full flow working in the prototype []
-
-2. Full-flow (Square frontend -> Payments backend -> Square Endpoints), think (and discuss) about Flow and DB(?) []
-
-3. Look at the additional config plugin (by kuldip-simform) for Apple Pay and Google Pay. Implement it. []
-
-4. Start implementing in work app (possibly branch from the `expo-51` branch?) []
-
-5.  Document what needs to go in as env vars(APP_ID?) and what as eas secrets (APP_ID?, MERCHANT_ID?, AUTH_TOKEN) []
-
-6. Miscellaneous (eas postinstall script needs change for Ruby script? etc.) []
-
-7. Testing (cannot test from India) []
-
-
-
-
 Notes:
 
 (Incorrect error while testing out Apple Pay in Simulator with sandbox application id):

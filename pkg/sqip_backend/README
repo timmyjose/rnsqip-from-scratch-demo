@@ -1,0 +1,1 @@
+This is the backend that receives the `curl` command from the frontend and communicates with the `Square` Endpoints.
