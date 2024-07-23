@@ -1,0 +1,7 @@
+[package]
+name = "square_rust_sdk"
+description = "Rust Square SDK adapted from the Square Java SDK (https://github.com/square/square-java-sdk/)"
+version = "1.0.0"
+edition = "2021"
+
+[dependencies]

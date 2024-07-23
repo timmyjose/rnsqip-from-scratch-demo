@@ -48,4 +48,3 @@ Production:
 2. Complete the Google Pay API Production Access Enablement Request Form - https://developers.google.com/pay/api/web/guides/test-and-deploy/request-prod-access
 
 Note: According to https://support.google.com/wallet/answer/12653781?hl=en#:~:text=Important%3A%20On%20June%2010%2C%202024,find%20instructions%20in%20this%20article, Google Wallet requires Android 9 (API Level 28) or higher.
-

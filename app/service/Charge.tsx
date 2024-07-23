@@ -16,6 +16,8 @@ export default async function chargeCardNonce(
       verificationToken,
     })
   }
+
+  console.log(`About to call ${CHARGE_SERVER_URL}`)
   const response = await fetch(CHARGE_SERVER_URL, {
     method: 'POST',
     headers: {
@@ -28,9 +30,11 @@ export default async function chargeCardNonce(
   try {
     const responseJson = await response.json()
     if (responseJson.errorMessage != null) {
+      console.error(responseJson.message)
       throw new ChargeError(responseJson.errorMessage)
     }
   } catch (error: any) {
+    console.error(error.message)
     throw new ChargeError(error.message)
   }
 }

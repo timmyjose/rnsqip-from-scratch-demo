@@ -1555,8 +1555,13 @@ dependencies = [
  "reqwest",
  "serde",
  "serde_json",
+ "square_rust_sdk",
  "tokio",
 ]
+
+[[package]]
+name = "square_rust_sdk"
+version = "0.1.0"
 
 [[package]]
 name = "subtle"

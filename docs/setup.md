@@ -70,3 +70,9 @@ message: 'Something went wrong. Please contact the developer of this application
 debugCode: 'apple_pay_nonce_request_production_simulator',
 debugMessage: 'Apple Pay cannot be used in the simulator with a production Square application ID. Please use a Square sandbox application ID or test Apple Pay on a physical device.' }
 
+
+Square SDK:
+===========
+
+Calque over git@github.com:square/square-java-sdk.git ?
+
