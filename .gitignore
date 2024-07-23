@@ -6,6 +6,7 @@ node_modules/
 android
 ios
 auth_token
+target
 
 # Expo
 .expo/

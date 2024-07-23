@@ -1,7 +1,7 @@
 {
   "name": "rnsqip-from-scratch-demo",
   "version": "1.0.0",
-  "main": "expo/AppEntry.js",
+  "main": "index.js",
   "scripts": {
     "setup": "bash scripts/setup.sh",
     "android": "expo run:android",

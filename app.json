@@ -41,7 +41,7 @@
       [
         "./plugins/withConfgureApplePayAndGooglePay.js",
         {
-          "merchantIdentifier": "merchant.com.polybaselabs.payy-test",
+          "merchantIdentifier": "merchant.rnsqip-from-scratch-demo.sandbox",
           "enableGooglePay": true
         }
       ],
