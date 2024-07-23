@@ -107,7 +107,7 @@ export default function HomeScreen() {
   const onApplePayComplete = async () => {
     if (applePayState === applePayStatus.succeeded) {
       setAlertValue(
-        'Congratulation, Your order was successful',
+        'Congratulations, Your order was successful',
         'Go to your Square dashboard to see this order reflected in the sales tab.',
         true
       )
@@ -130,7 +130,7 @@ export default function HomeScreen() {
       try {
         await chargeCardNonce(cardDetails.nonce)
         setAlertValue(
-          'Congratulation, Your order was successful',
+          'Congratulations, Your order was successful',
           'Go to your Square dashbord to see this order reflected in the sales tab.',
           true
         )

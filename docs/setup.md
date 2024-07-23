@@ -74,5 +74,8 @@ debugMessage: 'Apple Pay cannot be used in the simulator with a production Squar
 Square SDK:
 ===========
 
-Calque over git@github.com:square/square-java-sdk.git ?
+Calque over git@github.com:square/square-java-sdk.git? [❌]
+
+Or maybe just use this client - https://crates.io/crates/square-api-client [✅]
+    (use API Version: 2024-07-17 (latest))
 
