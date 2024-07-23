@@ -1,7 +1,7 @@
 
 An example of Square In-App Payments SDK (frontend only) integration into a bare `expo` 51 `React Native` project.
 
-Source code taken (adapted) from: https://github.com/square/in-app-payments-react-native-plugin/tree/master/react-native-in-app-payments-quickstart
+UI Source code taken (adapted) from: https://github.com/square/in-app-payments-react-native-plugin/tree/master/react-native-in-app-payments-quickstart
 
 Configuration: custom.
 
