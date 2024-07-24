@@ -39,7 +39,7 @@
         }
       ],
       [
-        "./plugins/withConfgureApplePayAndGooglePay.js",
+        "./plugins/withConfigureApplePayAndGooglePay.js",
         {
           "merchantIdentifier": "merchant.rnsqip-from-scratch-demo.sandbox",
           "enableGooglePay": true
